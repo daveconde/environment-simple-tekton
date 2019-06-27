@@ -59,6 +59,10 @@ pipelineConfig:
                 dir: /workspace/source/env
                 command: jx
                 args: ['step','verify','install']
+              - name: apply-pipeline-schedulers
+                dir: /workspace/source/env
+                command: jx
+                args: ['step','scheduler','config', 'apply', '--direct=true']  
     pullRequest:
       pipeline:
         agent:
